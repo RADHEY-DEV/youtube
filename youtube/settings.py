@@ -25,7 +25,7 @@ SECRET_KEY = '$r+9f&*3z3&&=)70un(9gdc_5q*!p86ebmh3v3avwe$n3ox$9^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','youtube-radhey.herokuapp.com']
 
 
 # Application definition
