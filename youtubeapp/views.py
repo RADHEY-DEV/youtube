@@ -24,7 +24,7 @@ def yt_download_done(request, resolution):
     homedir = os.path.expanduser("~")
     dirs = homedir + '/Downloads'
     if request.method == "POST":
-        return FileResponse(open(YouTube(url).streams.get_by_resolution(resolution).download(dirs)))
+        return FileResponse(open(YouTube(url).streams.first().download(skip_existing=True), 'rb'))
         return render(request, 'done.html')
     else:
         return render(request, 'error.html')
