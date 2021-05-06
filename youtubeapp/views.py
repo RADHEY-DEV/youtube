@@ -22,7 +22,7 @@ def download(request):
 def yt_download_done(request, resolution):
     global url
     homedir = os.path.expanduser("~")
-    dirs = homedir + '/Downloads'
+    dirs = homedir
     if request.method == "POST":
         YouTube(url).streams.get_by_resolution(resolution).download(dirs)
         return render(request, 'done.html')
